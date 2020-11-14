@@ -2,7 +2,13 @@ import React from "react";
 import { getCurrentTheme } from "./utils";
 
 function SocialNetworks() {
-  return <p>abc</p>;
+  return (
+    <div style={{ marginLeft: "20%" }}>
+      <img src="fb.png" />
+      <img src="inst.png" />
+      <img src="youtube.png" />
+    </div>
+  );
 }
 function CopyRight() {
   return (
