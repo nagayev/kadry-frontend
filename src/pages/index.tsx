@@ -7,7 +7,7 @@ const IndexPage = () => {
   return (
     <>
       <Head>
-        <title>Marat Nagayev</title>
+        <title>Hackoton</title>
       </Head>
       <PageContentsForIndex />
     </>
