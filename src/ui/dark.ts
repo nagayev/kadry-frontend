@@ -48,13 +48,13 @@ const button: CSSProperties = {
   backgroundColor: purpleColor,
   borderRadius: "5%",
   borderColor: purpleColor,
-  width: "150px",
+  width: "50%", //150px
   height: "50px",
   marginLeft: "10px",
 };
 const input: CSSProperties = {
   width: "50%",
-  height: "20%",
+  height: "50px",
   border: "1px solid #DADADA",
   boxSizing: "border-box",
   borderRadius: "5px",
@@ -67,17 +67,22 @@ const loginTop: CSSProperties = {
 };
 const loginMain: CSSProperties = {
   //marginLeft: "50%",
-  width: "20%",
+  width: "25%",
   marginLeft: "40%",
   textAlign: "center",
   background: "white",
   border: "2px solid #CECBFF",
+  borderRadius: "16px",
+};
+const analitic: CSSProperties = {
+  color: purpleColor,
 };
 const dark = {
   top: { statistics, moreDetailsButton },
   charts: { chart, chartHeader, moreDetails },
   footer: { footer },
   all: { input, button },
-  loginPage: { loginTop, a, loginMain },
+  loginPage: { loginTop, a, loginMain }, //and reg page too
+  stats: { analitic },
 };
 export default dark;

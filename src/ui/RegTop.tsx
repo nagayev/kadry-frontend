@@ -1,12 +1,7 @@
 import React from "react";
 import { getCurrentTheme } from "./utils";
-import BeautifulButton from "./BeautifulButton";
-/*
-<div>
-          <BeautifulButton background="white" text="Регистрация" />
-          <BeautifulButton text="Войти" />
-        </div>
- */
+//import BeautifulButton from "./BeautifulButton";
+
 function RegTop() {
   const style = getCurrentTheme("loginPage");
   return (

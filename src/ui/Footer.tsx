@@ -14,8 +14,8 @@ function SocialNetworks() {
 function CopyRight() {
   return (
     <div style={{ marginLeft: "20%" }}>
-      <p>&copy;1990-2020 Ситуационные центры</p>
-      <p>117220, Москва, ул. Гитхаба, д. 23, кв. 42</p>
+      <p>nashapocta@mail.ru</p>
+      <p>+79008888888</p>
     </div>
   );
 }
