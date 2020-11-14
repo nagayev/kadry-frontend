@@ -15,8 +15,7 @@ function LoginMain() {
         <div style={{ width: "30%" }}>&nbsp;</div>
         <a style={style.a} href="about:config">
           Забыли пароль?
-        </a>{" "}
-        <br />
+        </a>
         <BeautifulButton text="Продолжить" />
       </div>
     </div>

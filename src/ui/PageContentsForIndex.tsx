@@ -10,7 +10,7 @@ const PageContentsForIndex: NextPage = () => {
   //const style = getCurrentTheme();
   return (
     <>
-      <div style={{ display: "inline-flex" }}>
+      <div style={{ display: "inline-flex", textAlign: "center" }}>
         <MainLeft />
         <MainRight />
       </div>

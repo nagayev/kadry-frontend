@@ -3,7 +3,7 @@ import LoginTop from "./RegTop";
 import LoginMain from "./RegMain";
 import Footer from "./Footer";
 
-function LoginPageContent() {
+function RegPageContent() {
   //input 1:5.6923076923076925 width,height
   return (
     <div>
@@ -13,4 +13,4 @@ function LoginPageContent() {
     </div>
   );
 }
-export default LoginPageContent;
+export default RegPageContent;

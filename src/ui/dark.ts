@@ -39,6 +39,7 @@ const footer: CSSProperties = {
   display: "inline-flex",
   background: "#2F2E41",
   bottom: "0",
+  color: "white",
 
   //paddingTop: "50vh",
 };
@@ -49,21 +50,25 @@ const button: CSSProperties = {
   borderColor: purpleColor,
   width: "150px",
   height: "50px",
+  marginLeft: "10px",
 };
 const input: CSSProperties = {
-  width: "10%",
-  height: "2%",
+  width: "50%",
+  height: "20%",
   border: "1px solid #DADADA",
   boxSizing: "border-box",
   borderRadius: "5px",
+  marginTop: "20px",
 };
 const loginTop: CSSProperties = {
-  marginLeft: "20%",
+  //marginLeft: "20%",
   display: "flex",
   background: "white",
 };
 const loginMain: CSSProperties = {
   //marginLeft: "50%",
+  width: "20%",
+  marginLeft: "40%",
   textAlign: "center",
   background: "white",
   border: "2px solid #CECBFF",
