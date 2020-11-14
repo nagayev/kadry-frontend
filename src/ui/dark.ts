@@ -34,10 +34,13 @@ const statistics: CSSProperties = {
 };
 const footer: CSSProperties = {
   //position: "absolute",
+  position: "fixed",
   width: "100%",
   display: "inline-flex",
   background: "#2F2E41",
   bottom: "0",
+
+  //paddingTop: "50vh",
 };
 const button: CSSProperties = {
   color: "white",

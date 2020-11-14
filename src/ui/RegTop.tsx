@@ -1,7 +1,7 @@
 import React from "react";
 import { getCurrentTheme } from "./utils";
 import BeautifulButton from "./BeautifulButton";
-function LoginTop() {
+function RegTop() {
   const style = getCurrentTheme("loginPage");
   return (
     <>
@@ -18,4 +18,4 @@ function LoginTop() {
     </>
   );
 }
-export default LoginTop;
+export default RegTop;

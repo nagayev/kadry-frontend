@@ -2,11 +2,12 @@ import React from "react";
 import { getCurrentTheme } from "./utils";
 
 function SocialNetworks() {
+  const style = { marginLeft: "20%", boxSizing: "border-box", padding: "20px" };
   return (
     <div style={{ marginLeft: "20%" }}>
       <img src="fb.png" />
-      <img src="inst.png" />
-      <img src="youtube.png" />
+      <img style={{ marginLeft: "20px" }} src="inst.png" />
+      <img style={{ marginLeft: "20px" }} src="youtube.png" />
     </div>
   );
 }
