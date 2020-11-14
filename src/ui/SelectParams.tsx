@@ -16,7 +16,7 @@ function Label(props) {
 }
 function Param(props) {
   const style = getCurrentTheme("stats"); //all???
-  const [labels, setLabels] = useState([]);
+  const [labels, setLabels] = useState([] as any);
   const options = {
     Сфера: ["С/х", "IT"],
     Квалификация: ["Учащийся", "Высшее образование"],
@@ -28,12 +28,12 @@ function Param(props) {
       console.warn("Validation Error");
       return;
     }
-    const copy = labels.slice();
+    const copy: any = labels.slice();
     copy.push(text); //it's okey
     setLabels(copy);
   };
   const removeLabel = (name) => {
-    const copy = labels.slice();
+    const copy: any = labels.slice();
     copy.splice(copy.indexOf(name), 1);
     setLabels(copy);
   };
@@ -60,7 +60,7 @@ function Param(props) {
 function AnotherParam() {
   const [firstYear, setFirstYear] = useState(2016);
   const [SecondYear, setSecondYear] = useState(2017);
-  let options = [];
+  let options: number[] = [];
   for (let i = 2016; i < 2020; i++) options.push(i);
   return (
     <div style={{ display: "inline-flex" }}>
