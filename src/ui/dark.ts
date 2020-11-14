@@ -77,12 +77,16 @@ const loginMain: CSSProperties = {
 const analitic: CSSProperties = {
   color: purpleColor,
 };
+const selectParams: CSSProperties = {
+  background: purpleColor,
+  borderRadius: "8px",
+};
 const dark = {
   top: { statistics, moreDetailsButton },
   charts: { chart, chartHeader, moreDetails },
   footer: { footer },
   all: { input, button },
   loginPage: { loginTop, a, loginMain }, //and reg page too
-  stats: { analitic },
+  stats: { analitic, selectParams },
 };
 export default dark;

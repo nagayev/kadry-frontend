@@ -3,9 +3,16 @@ import "../ui/PageContentsForIndex.css";
 
 import { AppProps } from "next/app";
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 
 const App: React.FunctionComponent<AppProps> = ({ Component, pageProps }) => {
+  /*useEffect(() => {
+    let pageHeight = document.documentElement.scrollHeight;
+    let obj = document.body;
+    if (obj.style.height > pageHeight) {
+      document.querySelector("#footer").style.position = "absolute";
+    }
+  }); */
   return (
     <>
       <Head>

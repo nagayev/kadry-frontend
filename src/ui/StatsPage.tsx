@@ -25,8 +25,12 @@ function StatsPage() {
     const opts = {
       method: "GET",
     };
-    fetch(`http://weirdeproject.pythonanywhere.com/${stringify(body)}`, opts)
-      .then((data) => alert(data))
+    fetch(
+      `https://weirdeproject.pythonanywhere.com/test${stringify(body)}`,
+      opts,
+    )
+      .then((data) => data.json())
+      .then((data) => console.log(data))
       .catch(onError);
   }, []);
   return (
