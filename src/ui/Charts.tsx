@@ -33,7 +33,10 @@ function Charts() {
       </p>
       <div style={{ display: "block" }}>
         <div style={{ display: "inline-flex", width: "120%" }}>{topCharts}</div>
-        <div style={{ display: "inline-flex" }}>{bottomCharts}</div>
+        <div style={{ height: "10%" }}>&nbsp;</div>
+        <div style={{ display: "inline-flex", width: "120%" }}>
+          {bottomCharts}
+        </div>
       </div>
     </>
   );

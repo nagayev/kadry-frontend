@@ -38,16 +38,18 @@ function MainTop() {
           <p style={{ padding: "0 300px" }}>Ситуационные центры</p>
         </div>
         <div style={{ width: "40%" }}>&nbsp;</div>
-        <Link href="/reg">
-          <div>
-            <PassiveButton text="Регистрация" />
-          </div>
-        </Link>
-        <Link href="/login">
-          <div>
-            <ActiveButton text="Войти" />
-          </div>
-        </Link>
+        <div style={{ display: "inline-flex", marginRight: "10%" }}>
+          <Link href="/reg">
+            <div>
+              <PassiveButton text="Регистрация" />
+            </div>
+          </Link>
+          <Link href="/login">
+            <div>
+              <ActiveButton text="Войти" />
+            </div>
+          </Link>
+        </div>
       </div>
     </>
   );

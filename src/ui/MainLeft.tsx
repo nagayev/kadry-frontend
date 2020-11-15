@@ -10,11 +10,10 @@ function MainLeft() {
       <p style={large}>
         Использую <span style={style.statistics}>статистику</span>
       </p>
-      <p style={large}>
-        Provide a network for all your needs with ease and fun using Lasles VPN
-        discover
+      <p>
+        Используя данные по разным критерием мы расскажем какая работа будет
       </p>
-      <p>interesting features from us.</p>
+      <p>актуальна в следующем году.</p>
       <button style={style.moreDetailsButton}>Подробнее</button>
     </div>
   );
