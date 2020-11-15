@@ -1,4 +1,6 @@
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import NoSsr from "./no";
 import { getCurrentTheme } from "./utils";
 
 const purpleColor = "red";
@@ -130,14 +132,21 @@ function SelectParams() {
       .catch((err) => console.error(err));
   }, [field_of_activity, qualification, age, gender]);
   console.log(field_of_activity, work_years, qualification);
+  const m = Math.random();
+  const href = `/stats?m=${m}`;
+  console.log("href", href);
   return (
-    <div style={{ width: "100%" }}>
-      <Param text="Сфера" setter={setFieldOfActivity} />
-      <Param text="Квалификация" setter={setQualification} />
-      <Param text="Вакансии" />
-      <AnotherParam setter={setWorkYears} /> <br />
-      <button style={button}>Отправить</button>
-    </div>
+    <NoSsr>
+      <div style={{ width: "100%" }}>
+        <Param text="Сфера" setter={setFieldOfActivity} />
+        <Param text="Квалификация" setter={setQualification} />
+        <Param text="Вакансии" setter={() => {}} />
+        <AnotherParam setter={setWorkYears} /> <br />
+        <a href={href}>
+          <button style={button}>Отправить</button>
+        </a>
+      </div>
+    </NoSsr>
   );
 }
 export default SelectParams;

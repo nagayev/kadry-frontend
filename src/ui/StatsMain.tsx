@@ -4,7 +4,6 @@ import { getCurrentTheme } from "./utils";
 //import BeautifulButton from "./BeautifulButton";
 import SelectParams from "./SelectParams";
 import StatButtons from "./StatButtons";
-import StatCharts from "./StatCharts";
 
 function StatsMain() {
   const style = getCurrentTheme("stats");
@@ -14,7 +13,6 @@ function StatsMain() {
         <SelectParams />
       </div>
       <StatButtons />
-      <StatCharts m={1} />
     </>
   );
 }

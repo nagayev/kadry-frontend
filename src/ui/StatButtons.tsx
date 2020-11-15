@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import StatCharts from "./StatCharts";
+import Predicts from "./Predicts";
+
 const purpleColor = "#6C63FF";
 let active = {
   color: "white",
@@ -34,21 +37,32 @@ function MyButton(props) {
 }
 function StatButtons() {
   const [actives, setActives] = useState([true, false]);
+  const [mode, setMode] = useState(true);
   const setFirstActive = () => {
     setActives([true, false]);
+    setMode(true);
   };
   const setSecondActive = () => {
     setActives([false, true]);
+    setMode(false);
   };
+  const graph = mode ? (
+    <StatCharts m={Math.random()} />
+  ) : (
+    <Predicts m={Math.random()} />
+  );
   return (
-    <div style={{ display: "inline-flex" }}>
-      <p onClick={setFirstActive}>
-        <MyButton active={actives[0]} text="Данные на сегодня" />
-      </p>
-      <p onClick={setSecondActive}>
-        <MyButton active={actives[1]} text="Прогнозы" />
-      </p>
-    </div>
+    <>
+      <div style={{ display: "inline-flex" }}>
+        <p onClick={setFirstActive}>
+          <MyButton active={actives[0]} text="Данные на сегодня" />
+        </p>
+        <p onClick={setSecondActive}>
+          <MyButton active={actives[1]} text="Прогнозы" />
+        </p>
+      </div>
+      {graph}
+    </>
   );
 }
 export default StatButtons;
