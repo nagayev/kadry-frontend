@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import {
   LineChart,
   Line,
@@ -15,6 +15,7 @@ function getRandomArbitrary(min, max) {
 
 const m = getRandomArbitrary(1, 7) / 2;
 const m1 = getRandomArbitrary(1, 5) / 2;
+
 const data = [
   {
     name: "Февраль",
@@ -59,38 +60,41 @@ const data = [
     amt: 2100 * m,
   },
 ];
-const getData = (a, b) => data;
-function StatCharts(props) {
-  const data = getData(props.m, props.m1);
-  return (
-    <LineChart
-      width={500}
-      height={300}
-      data={data}
-      margin={{
-        top: 5,
-        right: 30,
-        left: 20,
-        bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
-      <YAxis />
-      <Tooltip />
-      <Legend />
-      <Line
-        type="monotone"
-        dataKey=" кол-во не занятых специалистов"
-        stroke="#8884d8"
-        activeDot={{ r: 8 }}
-      />
-      <Line
-        type="monotone"
-        dataKey="количество требуемых спецаилистов"
-        stroke="#82ca9d"
-      />
-    </LineChart>
-  );
+
+export default class Example extends PureComponent {
+  static jsfiddleUrl = "https://jsfiddle.net/alidingling/xqjtetw0/";
+
+  render() {
+    //console.log(this.props.m);
+    return (
+      <LineChart
+        width={500}
+        height={300}
+        data={data}
+        margin={{
+          top: 5,
+          right: 30,
+          left: 20,
+          bottom: 5,
+        }}
+      >
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Line
+          type="monotone"
+          dataKey=" кол-во не занятых специалистов"
+          stroke="#8884d8"
+          activeDot={{ r: 8 }}
+        />
+        <Line
+          type="monotone"
+          dataKey="количество требуемых спецаилистов"
+          stroke="#82ca9d"
+        />
+      </LineChart>
+    );
+  }
 }
-export default StatCharts;

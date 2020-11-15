@@ -8,7 +8,7 @@ function MainLeft() {
     <div>
       <p style={large}>Найдите крутую работу, </p>
       <p style={large}>
-        Использую <span style={style.statistics}>статистику</span>
+        Используя <span style={style.statistics}>статистику</span>
       </p>
       <p>
         Используя данные по разным критерием мы расскажем какая работа будет

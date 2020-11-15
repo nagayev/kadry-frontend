@@ -41,6 +41,7 @@ function Param(props) {
     const copy: any = labels.slice();
     copy.push(text); //it's okey
     setLabels(copy);
+    props.setter(copy);
   };
   const removeLabel = (name) => {
     const copy: any = labels.slice();
@@ -94,15 +95,12 @@ function AnotherParam(props) {
 }
 function SelectParams() {
   ///test?field_of_activity=bool_or_name&qualification=bool_or_name&age=1@3@5-10&work_years=1@3@5-10&gender=m|w|mw
-  const [field_of_activity, setFieldOfActivity] = useState("bool_or_true");
-  const [qualification, setQualification] = useState("bool_or_true");
+  const [field_of_activity, setFieldOfActivity] = useState(["bool_or_true"]);
+  const [qualification, setQualification] = useState(["bool_or_true"]);
   const [age, setAge] = useState("1@3@5-10");
   const [work_years, setWorkYears] = useState("1");
   const [gender, setGender] = useState("m");
-  const onError = (err) => {
-    console.error(err);
-    alert("Произошла ошибка. Обратитесь в техподдержку");
-  };
+
   function stringify(object) {
     let str = "?";
     let keys = Object.keys(object);
@@ -112,18 +110,26 @@ function SelectParams() {
     return encodeURI(tmp);
   }
   useEffect(() => {
+    fetch("https://weirdeproject.pythonanywhere.com/get_section")
+      .then((data) => console.log(data))
+      .catch((err) => console.error(err));
+  }, []);
+  useEffect(() => {
     const body = {
-      field_of_activity,
-      qualification,
-      age,
+      field_of_activity: field_of_activity.join("@"),
+      qualification: qualification.join("@"),
+      /*age,
       work_years,
-      gender: "m|w|mw",
+      gender: "m|w|mw", */
     };
+    console.log("body", body);
+    const answer = {};
     fetch(`https://weirdeproject.pythonanywhere.com/test${stringify(body)}`)
       .then((data) => data.json())
       .then((data) => console.log(data))
-      .catch(onError);
+      .catch((err) => console.error(err));
   }, [field_of_activity, qualification, age, gender]);
+  console.log(field_of_activity, work_years, qualification);
   return (
     <div style={{ width: "100%" }}>
       <Param text="Сфера" setter={setFieldOfActivity} />

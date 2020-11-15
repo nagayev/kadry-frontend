@@ -14,7 +14,7 @@ function StatsMain() {
         <SelectParams />
       </div>
       <StatButtons />
-      <StatCharts />
+      <StatCharts m={1} />
     </>
   );
 }
