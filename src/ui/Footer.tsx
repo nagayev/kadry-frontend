@@ -19,10 +19,11 @@ function CopyRight() {
     </div>
   );
 }
-function Footer() {
+function Footer(props) {
   const style = getCurrentTheme("main/footer");
+  const css = props.noFixed ? style.footerNoFixed : style.footer;
   return (
-    <div style={style.footer}>
+    <div style={css}>
       <CopyRight />
       <SocialNetworks />
     </div>

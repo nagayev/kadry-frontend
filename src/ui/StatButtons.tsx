@@ -20,12 +20,6 @@ let passive = {
 };
 
 function ActiveButton(props) {
-  /*if (!props.active) {
-    const copy = Object.assign({}, button);
-    copy.backgroundColor = "white";
-    copy.color = "black";
-    setStyle(copy);
-  }*/
   return <button style={active}>{props.text}</button>;
 }
 function PassiveButton(props) {

@@ -10,6 +10,7 @@ const chart: CSSProperties = {
   backgroundColor: "white",
   color: "black",
   width: "20%",
+  padding: "0 50px", //TODO: new
 };
 const chartHeader: CSSProperties = {
   fontWeight: 600,
@@ -32,16 +33,21 @@ const moreDetailsButton: CSSProperties = {
 const statistics: CSSProperties = {
   color: purpleColor,
 };
+//footer
 const footer: CSSProperties = {
-  //position: "absolute",
   position: "fixed",
   width: "100%",
   display: "inline-flex",
   background: "#2F2E41",
   bottom: "0",
   color: "white",
-
-  //paddingTop: "50vh",
+};
+const footerNoFixed: CSSProperties = {
+  width: "100%",
+  display: "inline-flex",
+  background: "#2F2E41",
+  bottom: "0",
+  color: "white",
 };
 const button: CSSProperties = {
   color: "white",
@@ -86,7 +92,7 @@ const selectParams: CSSProperties = {
 const dark = {
   top: { statistics, moreDetailsButton },
   charts: { chart, chartHeader, moreDetails },
-  footer: { footer },
+  footer: { footer, footerNoFixed },
   all: { input, button },
   loginPage: { loginTop, a, loginMain }, //and reg page too
   stats: { analitic, selectParams },

@@ -18,20 +18,23 @@ function Chart(props: ChartData) {
 
 function Charts() {
   //const style = getCurrentTheme("main/charts");
-  const topHeaders = ["Образование"]; //["Образование", "Заработок", "Возраст"];
+  const topHeaders = ["Образование", "Заработок", "Возраст"];
   let topCharts = topHeaders.map((v, i) => {
     return <Chart header={v} key={i} />;
   });
-  const bottomHeaders = ["Пол"]; //["Пол", "График", "Квалифицикация"];
+  const bottomHeaders = ["Пол", "График", "Квалифицикация"];
   let bottomCharts = bottomHeaders.map((v, i) => {
     return <Chart header={v} key={i} />;
   });
   return (
     <>
-      <p>Виды графиков</p>
-      <div style={{ display: "inline" }}>{topCharts}</div>
-      <br />
-      <div style={{ display: "inline" }}>{bottomCharts}</div>
+      <p style={{ textAlign: "center", fontWeight: 500, fontSize: "30px" }}>
+        Виды графиков
+      </p>
+      <div style={{ display: "block" }}>
+        <div style={{ display: "inline-flex", width: "120%" }}>{topCharts}</div>
+        <div style={{ display: "inline-flex" }}>{bottomCharts}</div>
+      </div>
     </>
   );
 }

@@ -3,13 +3,14 @@ import { getCurrentTheme } from "./utils";
 
 function MainLeft() {
   const style = getCurrentTheme("main/top");
+  const large = { fontSize: "40px" };
   return (
     <div>
-      <p>Найдите крутую работу, </p>
-      <p>
+      <p style={large}>Найдите крутую работу, </p>
+      <p style={large}>
         Использую <span style={style.statistics}>статистику</span>
       </p>
-      <p>
+      <p style={large}>
         Provide a network for all your needs with ease and fun using Lasles VPN
         discover
       </p>
