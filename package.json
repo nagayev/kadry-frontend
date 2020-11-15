@@ -40,7 +40,8 @@
     "react-card-flip": "^1.0.10",
     "react-dom": "^16.13.1",
     "react-flexbox-grid": "^2.1.2",
-    "react-grid-layout": "^0.18.3"
+    "react-grid-layout": "^0.18.3",
+    "recharts": "^1.8.5"
   },
   "devDependencies": {
     "@hkdobrev/run-if-changed": "^0.3.1",

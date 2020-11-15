@@ -66,7 +66,6 @@ const loginTop: CSSProperties = {
   background: "white",
 };
 const loginMain: CSSProperties = {
-  //marginLeft: "50%",
   width: "25%",
   marginLeft: "40%",
   textAlign: "center",
@@ -78,6 +77,9 @@ const analitic: CSSProperties = {
   color: purpleColor,
 };
 const selectParams: CSSProperties = {
+  marginLeft: "30%",
+  marginRight: "30%",
+  color: "white",
   background: purpleColor,
   borderRadius: "8px",
 };
